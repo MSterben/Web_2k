@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+}
+h1{
+    font-size: 3em;
+    text-align: center;
+    margin: 20px 0;
+}
+p{
+    margin: 10px 0 20px 0;
+    font-size: 1.2em;
+}
+a{
+    text-decoration: none;
+}
+p a{
+    color: rgb(240, 2, 2);
+}
+img{
+    width: 450px;
+}
+figure{
+    text-align: center;
+}
+.size_for_big{
+    font-size: 1.6em;
+}
+.size_for_litle_big{
+    text-align: right;
+    font-size: 1.3em;
+}

@@ -1,0 +1,10 @@
+table {
+	border-collapse:collapse;
+}
+th, td {
+	border: 2px outset black;
+}
+body{
+	display: flex;
+	justify-content: center;
+} 
