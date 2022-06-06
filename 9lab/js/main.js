@@ -48,9 +48,7 @@ xhr.send();
 // close modal
 
 close_modal.onclick = function() { 
-    modal.classList.add('bounceOutDown'); 
-    window.setTimeout(function() { 
-        modal.classList.remove('modal_vis');
-        body.classList.remove('body_block'); 
-    }, 500);
+    modal.classList.add('bounceOutDown');  
+    modal.classList.remove('modal_vis');
+    body.classList.remove('body_block'); 
 };
