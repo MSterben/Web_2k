@@ -6,9 +6,9 @@ let modal = document.getElementById('modal');
 let body = document.getElementsByTagName('body')[0];
 
 for (let i = 0; i < open_modal.length; i++) {
-    open_modal[i].onclick = function() { // клік що б відкрити
+    open_modal[i].onclick = function() { 
 
-        //xhr
+    //xhr
 
     const baseSrc = 'https://usersdogs.dmytrominochkin.cloud';
     const xhr = new XMLHttpRequest();
@@ -30,9 +30,9 @@ for (let i = 0; i < open_modal.length; i++) {
     
     //manipulation with elements
 
-    modal.classList.add('modal_vis'); // додаєм вісібл для вікна 
-    modal.classList.remove('bounceOutDown'); //удадяєм ефект закриття
-    body.classList.add('body_block'); // забираємо можливість прокрутки
+    modal.classList.add('modal_vis'); 
+    modal.classList.remove('bounceOutDown'); 
+    body.classList.add('body_block'); 
 
     }
 }
@@ -47,10 +47,10 @@ xhr.send();
 
 // close modal
 
-close_modal.onclick = function() { // клік що б закрити
-    modal.classList.add('bounceOutDown'); // ефект закриття
-    window.setTimeout(function() { // удаляєм ефект закриття через пів сикунди шо б його побачити
+close_modal.onclick = function() { 
+    modal.classList.add('bounceOutDown'); 
+    window.setTimeout(function() { 
         modal.classList.remove('modal_vis');
-        body.classList.remove('body_block'); // повертаємо можливість прокрутки
+        body.classList.remove('body_block'); 
     }, 500);
 };
