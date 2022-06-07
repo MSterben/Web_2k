@@ -20,8 +20,6 @@ for (let i = 0; i < open_modal.length; i++) {
      }
     else{
     // chenging of modal window
-
-    document.getElementById("link").innerHTML = xhr.response[i].title;
     document.getElementById("link").src = baseSrc + xhr.response[i].dogImage;
     document.getElementById("name").innerHTML = xhr.response[i].title;
     document.getElementById("sex").innerHTML = xhr.response[i].sex;
