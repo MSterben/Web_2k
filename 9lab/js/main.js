@@ -31,7 +31,6 @@ for (let i = 0; i < open_modal.length; i++) {
     //manipulation with elements
 
     modal.classList.add('modal_vis'); 
-    modal.classList.remove('bounceOutDown'); 
     body.classList.add('body_block'); 
 
     }
@@ -47,8 +46,7 @@ xhr.send();
 
 // close modal
 
-close_modal.onclick = function() { 
-    modal.classList.add('bounceOutDown');  
+close_modal.onclick = function() {  
     modal.classList.remove('modal_vis');
     body.classList.remove('body_block'); 
 };
