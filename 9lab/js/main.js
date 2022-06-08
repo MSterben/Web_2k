@@ -1,17 +1,21 @@
 const requestURL = 'https://usersdogs.dmytrominochkin.cloud/dogs';
-
+const baseSrc = 'https://usersdogs.dmytrominochkin.cloud';
+const xhr = new XMLHttpRequest();
 let open_modal = document.querySelectorAll('.open_modal');
 let close_modal = document.getElementById('close_modal');
 let modal = document.getElementById('modal');
 let body = document.getElementsByTagName('body')[0];
+
+// function death () {
+
+
+// }
 
 for (let i = 0; i < open_modal.length; i++) {
     open_modal[i].onclick = function() { 
 
     //xhr
 
-    const baseSrc = 'https://usersdogs.dmytrominochkin.cloud';
-    const xhr = new XMLHttpRequest();
     xhr.open('GET', requestURL);
     xhr.responseType = 'json';
     xhr.onload = () =>{
