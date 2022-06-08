@@ -76,7 +76,7 @@ Manager.prototype.getSalary = function() {
       }
     }
     if (facSlaves > (this.team.length / 2)) {
-      countedSalary  = countedSalary  * 1.1;
+      countedSalary   *= 1.1;
     }
     return countedSalary ;
 }
