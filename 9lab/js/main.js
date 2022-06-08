@@ -6,10 +6,6 @@ let close_modal = document.getElementById('close_modal');
 let modal = document.getElementById('modal');
 let body = document.getElementsByTagName('body')[0];
 
-// function death () {
-
-
-// }
 
 for (let i = 0; i < open_modal.length; i++) {
     open_modal[i].onclick = function() { 
