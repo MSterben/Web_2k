@@ -1,23 +1,17 @@
 //main 
 const requestURL = 'https://usersdogs.dmytrominochkin.cloud/dogs';
 const baseSrc = 'https://usersdogs.dmytrominochkin.cloud';
-const xhr = new XMLHttpRequest();
-let close_modal = document.getElementById('close_modal');
-let body = document.getElementsByTagName('body')[0];
+
+let body = $('body').get(0);
 
 
 
 let x = 0;
+          // ajax
+          $.ajax(requestURL,{
+            success: function(data){
 
-xhr.open('GET', requestURL);
-    xhr.responseType = 'json';
-    xhr.onload = () =>{
-    if(xhr.status >= 400){
-         console.error(xhr.response)
-     }
-    else{
-        let kost = xhr.response;
-        kost.forEach(element => {
+        data.forEach(element => {
             main.insertAdjacentHTML("beforebegin", 
             `<div class="grid open_modal" onclick="display(this)"  value="${x}">
             <img src="${baseSrc}${element.dogImage}" alt="dog">
@@ -31,28 +25,22 @@ xhr.open('GET', requestURL);
             
         });
     }
-}
+});
+
     
-xhr.send();
-
-
 
 function display(elm) {
    
     var x = elm.getAttribute('value');
-    xhr.open('GET', requestURL);
-    xhr.responseType = 'json';
-    xhr.onload = () =>{
-    if(xhr.status >= 400){
-         console.error(xhr.response)
-     }
-    else{
+          // ajax
+      $.ajax(requestURL,{
+        success: function(data){
     // chenging of modal window
-    document.getElementById("link").src = baseSrc + xhr.response[x].dogImage;
-    document.getElementById("name").innerHTML = xhr.response[x].title;
-    document.getElementById("sex").innerHTML = xhr.response[x].sex;
-    document.getElementById("age").innerHTML = xhr.response[x].age;
-    document.getElementById("description").innerHTML = xhr.response[x].description;
+    $('#link')[0].src = baseSrc + data[x].dogImage;
+        $('#name')[0].innerHTML = data[x].title;
+        $('#sex')[0].innerHTML = data[x].sex;
+        $('#age')[0].innerHTML = data[x].age;
+        $('#description')[0].innerHTML = data[x].description;
     
     //manipulation with elements
 
@@ -60,50 +48,12 @@ function display(elm) {
     body.classList.add('body_block'); 
 
     }
-
+});
 }
     
-xhr.send();
-  }
 
-  
 // // close modal
 
-close_modal.onclick = function() {  
-    modal.classList.remove('modal_vis');
-    body.classList.remove('body_block'); 
-};
-
-//ajax
-
-
-const requestURL = 'https://usersdogs.dmytrominochkin.cloud/dogs';
-
-
-let open_modal = $('.open_modal');
-let modal =  document.getElementById('modal');
-let body = $('body').get(0);
-
-for (let i = 0; i < open_modal.length; i++) {
-    open_modal[i].onclick = function() { 
-      const baseSrc = 'https://usersdogs.dmytrominochkin.cloud';
-      // ajax
-      $.ajax(requestURL,{
-        success: function(data){
-    $('#link')[0].src = baseSrc + data[i].dogImage;
-    $('#name')[0].innerHTML = data[i].title;
-    $('#sex')[0].innerHTML = data[i].sex;
-    $('#age')[0].innerHTML = data[i].age;
-    $('#description')[0].innerHTML = data[i].description;
-    modal.classList.add('modal_vis'); 
-    body.classList.add('body_block');  
-        }
-      });
-              
-    };
-}
-
-// close modal
 
 $('#close_modal').click(function() {  
   modal.classList.remove('modal_vis');
