@@ -6,7 +6,7 @@ const requestURL = 'https://usersdogs.dmytrominochkin.cloud/dogs';
 
 
 
-let open_modal = document.querySelectorAll('.open_modal');
+let open_modal = $('.open_modal');
 let modal = document.getElementById('modal');
 let body = document.getElementsByTagName('body')[0];
 
