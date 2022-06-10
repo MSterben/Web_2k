@@ -2,13 +2,9 @@
 const requestURL = 'https://usersdogs.dmytrominochkin.cloud/dogs';
 
 
-
-
-
-
 let open_modal = $('.open_modal');
-let modal = document.getElementById('modal');
-let body = document.getElementsByTagName('body')[0];
+let modal =  document.getElementById('modal');
+let body = $('body').get(0);
 
 for (let i = 0; i < open_modal.length; i++) {
     open_modal[i].onclick = function() { 
@@ -25,9 +21,7 @@ for (let i = 0; i < open_modal.length; i++) {
     body.classList.add('body_block');  
         }
       });
-      
-//end of xhr
-        
+              
     };
 }
 
