@@ -101,7 +101,7 @@ Department.prototype.giveSalary = function() {
 
  // main function for displaying of salary all of team
 
- function main() {
+
   const devop = new Developer("Shadow", "Shaman", 1, 800);
   const devop2 = new Developer("Spirit", "Braker", 3, 800);
   const devop3 = new Developer("Ice", "Frog", 25, 800);
@@ -113,7 +113,3 @@ Department.prototype.giveSalary = function() {
   const departmen = new Department();
   departmen.managers.push(manager);
   departmen.giveSalary();
-}
-
-
-main();
